@@ -29,3 +29,8 @@ echo '<br> Total Trucks: ' . Truck::getTotal(). '<br>';
 
 /*$v1 = new \Vehicles\VehicleBase('Alex');
 $v1->move();*/
+
+$ser = serialize($car);
+$newCar = unserialize($ser);
+
+echo 'NewCar Owner: ' . $newCar->getOwner().'<br>';
