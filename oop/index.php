@@ -11,9 +11,18 @@ use Vehicles\{Car, Truck};
 echo 'class car <br>';
 $car = new Car('Alex');
 $car->move();
-echo 'Owner car: ' . $car->getOwner();
 
-echo 'class truck <br>';
-$truck = new Truck('Max', 'Pickup');
-$truck->move();
-echo 'Owner truck: ' . $truck->getOwner();
+echo '<br>';
+
+echo 'class truck 1 <br>';
+$truck1 = new Truck('Alex', 'Pickup');
+$truck1->move();
+
+echo '<br>';
+
+echo 'class truck 2 <br>';
+$truck2 = new Truck('Max', 'Pickup');
+$truck2->move();
+
+//echo '<br> Total Trucks: ' . Truck::$count. '<br>';
+echo '<br> Total Trucks: ' . Truck::getTotal(). '<br>';
