@@ -20,10 +20,10 @@ try{
     echo 'finally <br><br>';
 }
 
-
 echo 'class car <br>';
 $car = new Car('Alex');
 $car->move();
+echo 'GPS pos: '.$car->getPos().'<br>';
 
 echo '<br>';
 
