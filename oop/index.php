@@ -2,11 +2,24 @@
 
 include 'vehicles/Car.php';
 include 'vehicles/Truck.php';
+include 'vehicles/ToyCar.php';
 
 /*use Vehicles\Car;
 use Vehicles\Truck;*/
 
-use Vehicles\{Car, Truck};
+use Vehicles\{Car, Truck, ToyCar};
+
+try{
+    echo 'class ToyCar <br>';
+    $toyCar = new ToyCar('Alex');
+    $toyCar->move();
+    echo '<br>';
+}catch (Exception $e){
+    echo 'This is a toy <br>';
+}finally{
+    echo 'finally <br><br>';
+}
+
 
 echo 'class car <br>';
 $car = new Car('Alex');
