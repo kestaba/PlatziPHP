@@ -1,16 +1,11 @@
 <?php
 
-class Car{
-    //public $owner;
-    private $owner;
+class Vehicle{
+    protected $owner;
 
     public function __construct($owner){
         $this->owner = $owner;
         echo 'construct <br>';
-    }
-
-    public function __destruct(){
-        echo 'destruct <br>';
     }
 
     public function move(){
@@ -26,18 +21,32 @@ class Car{
     }
 }
 
+class Car extends Vehicle{
+    public function move(){
+        echo 'Car: moving <br>';
+    }
+}
+
+class Truck extends Vehicle{
+    private $type;
+
+    public function __construct($owner, $type){
+        #parent::__construct($owner);
+        $this->owner = $owner;
+        $this->type = $type;
+    }
+
+    public function move(){
+        echo 'Truck: '. $this->type . ' moving <br>';
+    }
+}
+
 echo 'class car <br>';
-
 $car = new Car('Alex');
-$car2 = new Car('Mike');
-
 $car->move();
+echo 'Owner car: ' . $car->getOwner();
 
-/*$car->owner = 'Alex';
-echo 'Owner: ' . $car->owner;*/
-
-/*$car->setOwner('Alex');
-$car2->setOwner('Max');*/
-
-echo '<br> Owner: ' . $car->getOwner();
-echo '<br> Owner2: ' . $car2->getOwner();
+echo 'class truck <br>';
+$truck = new Truck('Max', 'Pickup');
+$truck->move();
+echo 'Owner truck: ' . $truck->getOwner();
