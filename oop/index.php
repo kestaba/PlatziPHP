@@ -1,45 +1,12 @@
 <?php
 
-class Vehicle{
-    protected $owner;
+include 'vehicles/Car.php';
+include 'vehicles/Truck.php';
 
-    public function __construct($owner){
-        $this->owner = $owner;
-        echo 'construct <br>';
-    }
+/*use Vehicles\Car;
+use Vehicles\Truck;*/
 
-    public function move(){
-        echo 'moving <br>';
-    }
-
-    public function getOwner(){
-        return $this->owner;
-    }
-
-    public function setOwner($owner){
-        $this->owner = $owner;
-    }
-}
-
-class Car extends Vehicle{
-    public function move(){
-        echo 'Car: moving <br>';
-    }
-}
-
-class Truck extends Vehicle{
-    private $type;
-
-    public function __construct($owner, $type){
-        #parent::__construct($owner);
-        $this->owner = $owner;
-        $this->type = $type;
-    }
-
-    public function move(){
-        echo 'Truck: '. $this->type . ' moving <br>';
-    }
-}
+use Vehicles\{Car, Truck};
 
 echo 'class car <br>';
 $car = new Car('Alex');
