@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Databases</h1>
         <ul>
-            <li><a href="">List Users</a></li>
+            <li><a href="list.php">List Users</a></li>
             <li><a href="add.php">Add Users</a></li>
         </ul>
     </div>
