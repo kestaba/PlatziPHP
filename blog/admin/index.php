@@ -1,13 +1,3 @@
-<?php
-
-include_once 'config.php';
-
-$query = $pdo->prepare('SELECT * FROM blog_posts ORDER BY id DESC');
-$query->execute();
-$blogPosts = $query->fetchAll(PDO::FETCH_ASSOC);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,20 +16,9 @@ $blogPosts = $query->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="row">
             <div class="col-md-8">
-                <?php
-                    foreach($blogPosts as $blogPost){
-                        echo '<div class="blog-post">';
-                        echo '<h2>'. $blogPost['title'] .'</h2>';
-                        echo '<p>Jan 1, 2020 by <a href="">Alex</a></p>';
-                        echo '<div class="blog-post-image">';
-                        echo '<img src="images/keyboard.jpg" alt="" style="max-width:100%">';
-                        echo '</div>';
-                        echo '<div class="blog-post-content">';
-                        echo $blogPost['content'];
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                ?>
+               <ul>
+                   <li><a href="posts.php">Manager Post</a></li>
+               </ul>
             </div>
             <div class="col-md-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rerum accusantium, doloribus officiis laborum est a ducimus esse modi repellat placeat dolorum molestias cumque temporibus excepturi iure neque! Quos, est?Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolor quod aperiam minima quidem dolore maiores. Assumenda, totam unde! Autem hic, perspiciatis odio sit exercitationem aliquid facilis laborum quod iure.
