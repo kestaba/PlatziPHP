@@ -1,11 +1,3 @@
-<?php
-
-$query = $pdo->prepare('SELECT * FROM blog_posts ORDER BY id DESC');
-$query->execute();
-$blogPosts = $query->fetchAll(PDO::FETCH_ASSOC);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +22,7 @@ $blogPosts = $query->fetchAll(PDO::FETCH_ASSOC);
                         echo '<h2>'. $blogPost['title'] .'</h2>';
                         echo '<p>Jan 1, 2020 by <a href="">Alex</a></p>';
                         echo '<div class="blog-post-image">';
-                        echo '<img src="images/keyboard.jpg" alt="" style="max-width:100%">';
+                        echo '<img src="../images/keyboard.jpg" alt="" style="max-width:100%">';
                         echo '</div>';
                         echo '<div class="blog-post-content">';
                         echo $blogPost['content'];
