@@ -16,9 +16,10 @@
         </div>
         <div class="row">
             <div class="col-md-8">
-               <ul>
-                   <li><a href="posts.php">Manager Post</a></li>
-               </ul>
+                <h2>Admin Panel</h2>
+                <ul>
+                   <li><a href="<?php echo BASE_URL; ?>admin/posts">Manage Post</a></li>
+                </ul>
             </div>
             <div class="col-md-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rerum accusantium, doloribus officiis laborum est a ducimus esse modi repellat placeat dolorum molestias cumque temporibus excepturi iure neque! Quos, est?Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolor quod aperiam minima quidem dolore maiores. Assumenda, totam unde! Autem hic, perspiciatis odio sit exercitationem aliquid facilis laborum quod iure.
@@ -28,7 +29,7 @@
             <div class="col-md-12">
                 <footer>
                     This is a footer <br>
-                    <a href="admin/index.php">Admin Panel</a>
+                    <a href="<?php echo BASE_URL; ?>admin">Admin Panel</a>
                 </footer>
             </div>
         </div>
