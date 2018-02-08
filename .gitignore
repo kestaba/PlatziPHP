@@ -2,3 +2,4 @@ config.php
 blog/vendor
 blog/composer.phar
 .env
+logs
